@@ -15,7 +15,7 @@ Aqui é importante ser claro e conciso sobre o problema que o artigo aborda. Cla
 
 Exemplo: "Existing policies fail to capture the all-or-nothing property of transactions: all objects requested in parallel must be present in cache, or there will be little performance improvement because latency is dictated by the slowest access."
 	
-Uma tarefa importante para mostrar que entendeu o problema é descrever um exemplo. Nesse caso, teríamos algo do tipo: "Tipicamente, estratégias de cache como LRU e LFU são otimizadas para hit rate. Contudo, no caso de transações, pode ser que muitos objetos da transação estejam no cache, mas outros não e, portanto, a latência é ditada por esses que não estão. Veja um exemplo na figura abaixo..."
+Uma tarefa importante para mostrar que entendeu o problema é explicá-lo com suas próprias palavras e descrever um exemplo. Nesse caso, teríamos algo do tipo: "Tipicamente, estratégias de cache como LRU e LFU são otimizadas para hit rate. Contudo, no caso de transações, pode ser que muitos objetos da transação estejam no cache, mas outros não e, portanto, a latência é ditada por esses que não estão. Veja um exemplo na figura abaixo..."
 
 # Qual a solução?
 
