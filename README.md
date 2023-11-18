@@ -41,11 +41,11 @@ Exemplo: O algoritmo proposto é 3x mais eficiente, em termos de tempo de execu�
 # Resenha crítica
 
 Aqui é um espaço para você opinar sobre o artigo e levantar questões importantes para a discussão que você terá sobre ele. São tarefas importantes:
-	* identificar a relação dele com o que você está estudando e como você pode usar/reusar/combinar o que foi feito no artigo com o seu trabalho;
-	* identificar possíveis ameaças à validade na avaliação;
-	* identificar se a implementação (quando for o caso), está disponível e se você teve tempo/chance de experimentar com ela;
-	* identificar possíveis importantes questões não respondidas;
-	* identificar trabalhos futuros;
-	* relacionar esse trabalho com outros trabalhos similares/relacionados;
-	* levantar rapidamente/superficialmente as publicações dos autores e o que eles tem
-	feito
+	
+* identificar a relação dele com o que você está estudando e como você pode usar/reusar/combinar o que foi feito no artigo com o seu trabalho;
+* identificar possíveis ameaças à validade na avaliação;
+* identificar se a implementação (quando for o caso), está disponível e se você teve tempo/chance de experimentar com ela;
+* identificar possíveis importantes questões não respondidas;
+* identificar trabalhos futuros;
+* relacionar esse trabalho com outros trabalhos similares/relacionados;
+* levantar rapidamente/superficialmente as publicações dos autores e o que eles tem feito.
