@@ -49,3 +49,9 @@ Aqui é um espaço para você opinar sobre o artigo e levantar questões importa
 * identificar trabalhos futuros;
 * relacionar esse trabalho com outros trabalhos similares/relacionados;
 * levantar rapidamente/superficialmente as publicações dos autores e o que eles tem feito.
+
+# Discussão
+
+Deixar aqui os comentários e insights importantes que surgiram durante a discussão do paper com o grupo. Colocar aqui ideias de trabalhos de pesquisa que podem ser feitas a partir desse trabalho. Por exemplo, experimentar com outra base, estender a análise para outro algoritmo, modelo etc.
+
+
