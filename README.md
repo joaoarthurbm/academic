@@ -54,4 +54,9 @@ Aqui é um espaço para você opinar sobre o artigo e levantar questões importa
 
 Deixar aqui os comentários e insights importantes que surgiram durante a discussão do paper com o grupo. Colocar aqui ideias de trabalhos de pesquisa que podem ser feitas a partir desse trabalho. Por exemplo, experimentar com outra base, estender a análise para outro algoritmo, modelo etc.
 
+# Replicação
 
+* Onde estão os dados?
+* Onde está o código?
+* Conseguiu entender/rodar?
+* Dá para replicar o experimento/estudo?
