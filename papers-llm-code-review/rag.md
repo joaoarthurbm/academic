@@ -31,11 +31,23 @@ No RAG-Sentence, para cada um dos top K documentos recuperados o gerador produz 
 
 No RAG-Token, podemos utilizar um documento diferente para cada token alvo, o que permite que o gerador escolher conteúdo de diversos documentos quando produz o output. Os top K documentos são recuperados e o gerador produz uma distribuição para o próximo token do output para cada um dos documentos antes de marginalizar, então repete o processo para o próximo token do output.
 
-TODO: finalizar detalhes técnicos.
+O componente recuperador é baseado em Dense Passage Retrieval (DPR) que segue uma arquitetura bi-encoder formada por dois modelos BERT base, um como document encoder e outro como query encoder que buscam os top K documentos com as maiores probabilidades. Esse problema é um MIPS (Maximum Inner Product Search). Foi utilizando um bi-encoder pré-treinado do DPR para inicializar o recuperador e construir o índice de documentos. O recuperador foi treinado para recuperar documentos que contém respostas para questões do TriviaQA.
+
+O componente gerador utilizado foi um BART-large, um transformer Seq2Seq pré-treinado com 400M de parâmetros. Para combinar o input com os documentos recuperados, foi utilizado apenas a concatenação desses conteúdos.
+
+Os componentes recuperador e gerador foram treinados sem nenhuma supervisão direta quanto a qual documento deveria ser recuperado. Dado um corpus de treino com pares (input, output), foi minimizado o marginal negativo log-likelihood de cada alvo usando gradiente descendente estocástico.
 
 # Como foi avaliado?
 
-O importante aqui é deixar claras as questões de pesquisa respondidas e o método científico utilizado. Quais foram os passos metodológicos? que métricas foram utilizadas? que métodos estatísticos foram utilizados para amparar as observações? Qual a natureza dos dados? quantas observações foram utilizadas? etc
+Os experimentos com RAG foram realizados em knowledge-intensive tasks. Em todos os experimentos foi utilizada a mesma base de documentos da Wikipedia como fonte de conhecimento não-paramétrica. O dump utilizado foi de 2018 e cada artigo da Wikipedia foi quebrado em chunks de 100 palavras formando uma base de 21M de documentos. Foi utilizado um document encoder para computar os embeddings para cada um dos documentos e construir um único índice MIPS.
+
+Open-domain question answering
+
+Questões e respostas foram tratadas como pares textuais de input e output o modelo RAG foi treinado através da minimização do log-likelihood negativo das respostas. O modelo RAG foi comparado com os paradigmas populares de extração para QA, onde as respostas são spans extraídos dos documentos recuperados utilizando apenas memória não-paramétrica. RAG foi comparado também com soluções fechadas de QA, onde as respostas são gerados, mas utilizando apenas o conhecimento paramétrico. Foram considerados 4 open-domain QA datasets: Natural Questions (NQ), TriviaQA (TQA), WebQuestions (WQ) e CuratedTrec (CT). Como CT e WQ são pequenos foi utilizado DPR inicializando os modelos de CT e WQ com o NQ RAG.
+
+Abstractive Question Answering
+
+Para testar a geração de linguagem natural do RAG foi utilizada uma task que consiste de questões, 10 passagens de ouro recuperadas de uma engine de busca para cada questão e uma sentença de resposta completa.
 
 # Quais são os resultados?
 
