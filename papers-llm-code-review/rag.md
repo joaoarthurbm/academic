@@ -25,9 +25,9 @@ A técnica utilizada é interessante, pois a memória não-paramétrica pode ser
 
 ## Quais são os detalhes técnicos dessa solução? O que chama mais atenção? Qual a ideia geral e o que deve ser discutido em mais detalhes?
 
-Os autores propõe duas formas de marginalizar sobre os documentos recuperados para produzir uma distribuição sobre o texto gerado, são elas o RAG-Token e o RAG-Sentence.
+Os autores propõe duas formas de marginalizar sobre os documentos recuperados para produzir uma distribuição sobre o texto gerado, são elas o RAG-Token e o RAG-Sequence.
 
-No RAG-Sentence, para cada um dos top K documentos recuperados o gerador produz uma probabilidade da sequência de output que então são marginalizadas.
+No RAG-Sequence, para cada um dos top K documentos recuperados o gerador produz uma probabilidade da sequência de output que então são marginalizadas.
 
 No RAG-Token, podemos utilizar um documento diferente para cada token alvo, o que permite que o gerador escolher conteúdo de diversos documentos quando produz o output. Os top K documentos são recuperados e o gerador produz uma distribuição para o próximo token do output para cada um dos documentos antes de marginalizar, então repete o processo para o próximo token do output.
 
@@ -69,17 +69,17 @@ RAG-Sequence supera o BART em Open MS-MARCO NLG por 2.6 Bleu points e 2.6 Rouge-
 
 Jeopardy Question Generation
 
+RAG-Token teve desempenho melhor que RAG-Sequence na geração de questões Jeopardy e ambos superaram o BART na métrica Q-BLEU-1. A avaliação humana descobriu que em mais de 452 pares gerados pelo BART e RAG-Token, apenas em 7.1% dos casos o BART foi melhor que o RAG, enquanto RAG foi melhor que o BART em 42.7% e ambos os modelos tiveram bons resultados em 17% dos casos, mostrando a eficiência do RAG em relação um modelo de geração de estado da arte. Avaliadores entenderam as gerações do RAG mais específicas por uma grande margem.
+
+Fact Verification
+
+Para a 3-way classification, RAG alcançou 4.3% dos modelos estado da arte. Para 2-way classification, ele foi comparado com o trabalho realizado em "Elastic weight consolidation for better bias inoculation", onde o modelo foi treinado para classificar a sentença como verdadeira ou falsa dada a sentença de ouro. RAG conseguiu uma acurácia com 2.7% desse modelo.
+
 # Resenha crítica
 
-Aqui é um espaço para você opinar sobre o artigo e levantar questões importantes para a discussão que você terá sobre ele. São tarefas importantes:
+De maneira geral achei o artigo bastante complexo e difícil de acompanhar, e apesar de ter entendido a ideia geral do artigo, ao meu ver esse artigo precisa de um background muito bom para entender com mais segurança. Como se trata de uma forma de melhorar o desempenho de modelos LLMs usando contexto para dar mais infornações ao modelo, é um tema bem relevante para os estudos e experimentos dos modelos.
 
-- identificar a relação dele com o que você está estudando e como você pode usar/reusar/combinar o que foi feito no artigo com o seu trabalho;
-- identificar possíveis ameaças à validade na avaliação;
-- identificar se a implementação (quando for o caso), está disponível e se você teve tempo/chance de experimentar com ela;
-- identificar possíveis importantes questões não respondidas;
-- identificar trabalhos futuros;
-- relacionar esse trabalho com outros trabalhos similares/relacionados;
-- levantar rapidamente/superficialmente as publicações dos autores e o que eles tem feito.
+Achei que a avaliação do modelo foi explicada de maneira superficial.
 
 # Discussão
 
@@ -87,7 +87,7 @@ Deixar aqui os comentários e insights importantes que surgiram durante a discus
 
 # Replicação
 
-- Onde estão os dados?
-- Onde está o código?
-- Conseguiu entender/rodar?
-- Dá para replicar o experimento/estudo?
+- Onde estão os dados? Eles utilizaram dados da Wikipedia, mas não especificaram como recuperar
+- Onde está o código? Foi feita uma release na biblioteca HuggingFace e o código pode ser encontrado no GitHUb do HuggingFace
+- Conseguiu entender/rodar? Não houve tempo para estudar o código e executar experimentos ainda, mas como está disponível no HuggingFace, devemos conseguir executar com a API da biblioteca
+- Dá para replicar o experimento/estudo? Como não há informações suficientes sobre os dados e como recuperá-los da Wikipedia provavelmente não com os mesmo dados, mas como o modelo está disponível no HuggingFace, então podemos rodar com outros dados
