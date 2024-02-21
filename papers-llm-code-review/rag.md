@@ -47,13 +47,27 @@ Questões e respostas foram tratadas como pares textuais de input e output o mod
 
 Abstractive Question Answering
 
-Para testar a geração de linguagem natural do RAG foi utilizada uma task que consiste de questões, 10 passagens de ouro recuperadas de uma engine de busca para cada questão e uma sentença de resposta completa.
+Para testar a geração de linguagem natural do RAG foi utilizada uma task que consiste de questões, 10 passagens de ouro recuperadas de uma engine de busca para cada questão e uma sentença de resposta completa. Para tratar a task como uma abstractive QA task, foram utilizadas apenas as perguntas e respostas.
+
+Jeopardy Question Generation
+
+Para avaliar o RAG em uma configuração non-QA, foi estudado um domínio aberto de geração de questões Jeopardy. Jeopardy é um formato não usual que consiste em tentar adivinhar uma entidade por um fato sobre aquela entidade. Questões Jeopardy são precisos e factuais, logo gerar Questões Jeopardy condicionadas a suas entidades de resposta é uma knowledge-intensive task. Os dados do SearchQA foram divididos em 100K para treino, 14K para dev e 27K para testes. O modelo BART foi treinado para comparação e o modelo foi avaliado usando a métrica SQuAD-tuned Q-BLEU-1. Além disso, foram realizadas duas avaliações humanas: uma para verificar se uma sentença pode ser corroborada com fontes externas confiáveis e outra para avaliar a dependência mútua entre o input e o output.
+
+Fact verification
+
+Verificar fatos e decidir se eles são suportados ou refutados por documentos recuperados da Wikipedia, ou mesmo se não há informação suficiente para decidir. É uma tarefa interessante para veirificar a capacidade do RAG de classificação e não de geração. As classes suportado, refutado e infomação insuficiente foram mapeadas para tokens e então o modelo foi treinado com pares de sentenças e classes. Os autores não utilizaram supervisão sobre os documentos recuperados, pois em muitos casos do mundo real essas labels não estão disponíveis. Foram exploradas duas variantes do modelo: uma com todas as três classes e outra com apenas duas classes (suportado e refutado).
 
 # Quais são os resultados?
 
-Descrever de forma sucinta os resultados. Direto ao ponto.
+Open-domain question answering
 
-Exemplo: O algoritmo proposto é 3x mais eficiente, em termos de tempo de execução, do que as abordagens similares avaliadas. Além disso, o algoritmo proporcionou um ganhou de 70% de throughput.
+Nos dataset testados, o RAG alcançou resultados de estado da arte em todos sem um custo alto de pré-treino. Existem vantagens em gerar a respostas mesmo quando é possível extrair elas, pois documentos com pistas sobre as respostas, mas que não contém a resposta em si, ainda assim podem contribuir para gerar uma resposta correta. Um resultado foi de que o modelo tem uma acurácia de 11.8% quando a resposta correta não está em nenhum dos documentos recuperados, enquanto um modelo de extração teria uma acurácia de 0%.
+
+Abstractive Question Answering
+
+RAG-Sequence supera o BART em Open MS-MARCO NLG por 2.6 Bleu points e 2.6 Rouge-L points e alcança performance de estado da arte considerando que algumas perguntas não podem ser respondidas sem as gold passages e que nem todas as questões podem ser respondidas apenas com conhecimento da Wikipedia.
+
+Jeopardy Question Generation
 
 # Resenha crítica
 
