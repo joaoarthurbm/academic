@@ -11,7 +11,7 @@ Template para guiar a leitura de artigos.
 
 # Qual o problema?
 
-LLMs pré-treinados tem mostrado conseguir armazenar conhecimento factual oriundo dos dados em seus parâmetros. No entanto, sua habilidade de acessar e precisamente manipular conhecimento ainda é limitada. Conseguir prover uma origem para as decisões dos modelos, ou seja, fornecer alguma base sólida ou origem para as respostas geradas pelo modelo e atualizar seu conhecimento de mundo ainda é um problema de pesquisa em aberto. Modelos pré-treinados com um mecanismo de acesso à memória não-paramétrica podem superar esse problema, no entanto, foram investigados apenas em problemas de Question Answering de domínio aberto.
+LLMs pré-treinados tem mostrado conseguir armazenar conhecimento factual oriundo dos dados em seus parâmetros. No entanto, sua habilidade de acessar e precisamente manipular conhecimento ainda é limitada. Conseguir prover uma origem para as decisões dos modelos, ou seja, fornecer alguma base sólida ou origem para as respostas geradas pelo modelo e atualizar seu conhecimento de mundo ainda é um problema de pesquisa em aberto. Além disso, os modelos pré-treinados são muito generalistas e precisam de mais contexto para solucionar melhor os problemas. Modelos pré-treinados com um mecanismo de acesso à memória não-paramétrica podem superar esse problema, no entanto, foram investigados apenas em problemas de Question Answering de domínio aberto.
 
 # Qual a solução?
 
@@ -24,6 +24,8 @@ O mecanismo de recuperar documentos retorna os documentos mais relevantes para u
 A técnica utilizada é interessante, pois a memória não-paramétrica pode ser atualizada conforme o conhecimento do mundo evolui. Além disso, quando um fine tuning convencional é utilizado, atualizando os pesos do modelo pré-treinado, é possível que o modelo perca parte do conhecimendo adquirido durante o seu pré-treino, no entanto, a técnica do RAG apenas complementa o conhecimento que o modelo já possui.
 
 ## Quais são os detalhes técnicos dessa solução? O que chama mais atenção? Qual a ideia geral e o que deve ser discutido em mais detalhes?
+
+Conceito importante: marginalizar consiste em somar as probabilidades condicionais variando os valores de uma variável para entender a contribuição marginal.
 
 Os autores propõe duas formas de marginalizar sobre os documentos recuperados para produzir uma distribuição sobre o texto gerado, são elas o RAG-Token e o RAG-Sequence.
 
