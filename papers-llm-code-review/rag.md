@@ -25,7 +25,7 @@ A técnica utilizada é interessante, pois a memória não-paramétrica pode ser
 
 ## Quais são os detalhes técnicos dessa solução? O que chama mais atenção? Qual a ideia geral e o que deve ser discutido em mais detalhes?
 
-Conceito importante: marginalizar consiste em somar as probabilidades condicionais variando os valores de uma variável para entender a contribuição marginal.
+Conceito importante: marginalizar consiste em somar as probabilidades condicionais variando os valores de uma variável para entender a contribuição marginal de outra variável, no nosso contexto seria somar as probabilidades de cada um dos K documentos recuperados para um dado input.
 
 Os autores propõe duas formas de marginalizar sobre os documentos recuperados para produzir uma distribuição sobre o texto gerado, são elas o RAG-Token e o RAG-Sequence.
 
@@ -85,7 +85,9 @@ Achei que a avaliação do modelo foi explicada de maneira superficial.
 
 # Discussão
 
-Deixar aqui os comentários e insights importantes que surgiram durante a discussão do paper com o grupo. Colocar aqui ideias de trabalhos de pesquisa que podem ser feitas a partir desse trabalho. Por exemplo, experimentar com outra base, estender a análise para outro algoritmo, modelo etc.
+Durante a discussão do artigo chegamos a conclusão de que seria interessante procurar mais artigos relacionados ao RAG, além de artigos com conceitos fundamentais de transformers para aumentar nosso background, visto que o entendimento desse artigo foi difícil para todos. Também foi discutido quanto de recurso computacional pode ser necessário, algo que não foi citado no artigo. Foram discutidas as opções entre Google Colab, Cloud e uma GPU física na UFCG.
+
+O uso da API do HuggingFace facilita o uso do RAG e como banco de dados de vetores encontrei o Chromadb, mas podemos avaliar outras opções como o PG Vector.
 
 # Replicação
 
