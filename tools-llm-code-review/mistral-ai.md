@@ -1,21 +1,16 @@
-Template para guiar a leitura de artigos.
-
 # Metadados
 
-* Título
-* Autores
-* De que instituições são os autores?
-* Onde foi publicado
-* Ano de publicação
-* link
+* Mistral AI
+* Founded in April 2023 by previous employees of Meta Platforms and Google DeepMind
+* [Link](https://mistral.ai/)
 
-# Qual o problema?
+<!-- # Qual o problema?
 
 Aqui é importante ser claro e conciso sobre o problema que o artigo aborda. Claro, pode haver mais de um ou desdobramentos do mesmo, mas tipicamente é muito claro o problema que os autores estão tentando resolver. Cuidado aqui para não cair na armadilha de responder algo como "um sistema de recomendação para..." ou "um algoritmo para... " ou "construir uma ferramenta para...". Esses não são problemas, são soluções. Problema tipicamente é "lentidão do algoritmo XPTO"; "dificuldade em revisar grandes PRs"; etc.
 
 Exemplo: "Existing policies fail to capture the all-or-nothing property of transactions: all objects requested in parallel must be present in cache, or there will be little performance improvement because latency is dictated by the slowest access."
 	
-Uma tarefa importante para mostrar que entendeu o problema é explicá-lo com suas próprias palavras e descrever um exemplo. Nesse caso, teríamos algo do tipo: "Tipicamente, estratégias de cache como LRU e LFU são otimizadas para hit rate. Contudo, no caso de transações, pode ser que muitos objetos da transação estejam no cache, mas outros não e, portanto, a latência é ditada por esses que não estão. Veja um exemplo na figura abaixo..."
+Uma tarefa importante para mostrar que entendeu o problema é explicá-lo com suas próprias palavras e descrever um exemplo. Nesse caso, teríamos algo do tipo: "Tipicamente, estratégias de cache como LRU e LFU são otimizadas para hit rate. Contudo, no caso de transações, pode ser que muitos objetos da transação estejam no cache, mas outros não e, portanto, a latência é ditada por esses que não estão. Veja um exemplo na figura abaixo..." -->
 
 # Qual a solução?
 
