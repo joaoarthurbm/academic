@@ -52,7 +52,11 @@ Aqui é um espaço para você opinar sobre o artigo e levantar questões importa
 
 # Discussão
 
-Deixar aqui os comentários e insights importantes que surgiram durante a discussão do paper com o grupo. Colocar aqui ideias de trabalhos de pesquisa que podem ser feitas a partir desse trabalho. Por exemplo, experimentar com outra base, estender a análise para outro algoritmo, modelo etc.
+Deixar aqui os comentários e insights importantes que surgiram durante a discussão do paper com o grupo. 
+
+# O que eu tenho a ver com isso?
+
+* Colocar aqui ideias de trabalhos de pesquisa que podem ser feitas a partir desse trabalho. Por exemplo, experimentar com outra base, estender a análise para outro algoritmo, modelo etc. Colocar também como isso se relaciona com o que você está fazendo ou pretende fazer. O que dá para extrair, comparar, evoluir desse trabalho que tem relação com o seu.
 
 # Replicação
 
