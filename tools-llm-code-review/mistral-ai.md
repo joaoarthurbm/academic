@@ -1,73 +1,86 @@
 # Metadados
 
-* Mistral AI
+* [Mistral AI](https://mistral.ai/)
 * Founded in April 2023 by previous employees of Meta Platforms and Google DeepMind
-* [Site](https://mistral.ai/)
 
-# Qual a solução?
+# Introdução
 
-## Como os autores tentam resolver o problema? Criando um algoritmo novo? uma metodologia? uma ferramenta? 
+Mistral AI é uma empresa francesa que comercializa produtos de inteligência artificial (IA). A empresa levantou €385 milhões em outubro de 2023 e em dezembro de 2023 foi avaliada em mais de $2 bilhões.
 
-Exemplo: Os autores apresentam uma nova estratégia de cache específica para lidar com transações. Nessa estratégia, a ideia é levar em consideração a natureza "tudo-ou-nada" das transações. Como prova de conceito, é apresentada um sistema de cache de alta performance chamado dtox, que ...
+Ela produz modelos de linguagem de código aberto, citando a importância fundamental do software de código aberto e como resposta aos modelos proprietários.
 
-## Quais são os detalhes técnicos dessa solução? O que chama mais atenção? Qual a ideia geral e o que deve ser discutido em mais detalhes?
+Até março de 2024, dois modelos foram publicados e estão disponíveis como pesos. Três modelos adicionais, *Small*, *Medium* e *Large*, estão disponíveis apenas via API.
 
-Exemplo: os autores agrupam objetos de uma transação utilizando uma análise de grafos acíclicos de dependência, através de uma heurística que funciona da seguinte maneira: ...
+# Mistral 7B
 
-# Resultados
+Mistral 7B é um modelo de linguagem com 7,3 bilhões de parâmetros que utiliza a arquitetura de transformers. O modelo foi lançado sob a licença Apache 2.0. A postagem no blog de lançamento afirma que o modelo supera o LLaMA 2 13B em todos os benchmarks testados e está em pé de igualdade com o LLaMA 34B em muitos dos benchmarks testados.
+
+O Mistral 7B utiliza uma arquitetura semelhante ao LLaMA, mas com algumas mudanças no mecanismo de *attention*. Em particular, ele utiliza a *Grouped-query attention* (GQA) destinada a uma inferência mais rápida e a *Sliding Window Attention* (SWA) destinada a lidar com sequências mais longas.
+
+A *Sliding Window Attention* (SWA) reduz o custo computacional e de memória para sequências mais longas. Na *Sliding Window Attention*, cada token só pode atender a um número fixo de tokens da camada anterior em uma "janela deslizante" de 4096 tokens, com um comprimento total de contexto de 32768 tokens. No momento da inferência, isso reduz a disponibilidade de cache, levando a uma latência mais alta e a uma menor taxa de transferência. Para amenizar esse problema, o Mistral 7B utiliza um *rolling buffer cache*.
+
+Tanto um modelo base quanto um modelo "instruct" foram lançados, sendo que este último recebeu ajustes adicionais para seguir prompts de estilo de conversa. O modelo *tunado* é destinado apenas para fins de demonstração e não possui *guardrails* ou *moderation* incorporados.
+
+# Mixtral 8x7B
+
+Ao contrário do Mistral 7B, o Mixtral 8x7B utiliza uma arquitetura de *sparse mixture of experts*. O modelo possui 8 grupos distintos de "especialistas", dando ao modelo um total de 46,7 bilhões de parâmetros utilizáveis. Cada token único pode utilizar apenas 12,9 bilhões de parâmetros, portanto, proporcionando a velocidade e o custo que um modelo de 12,9 bilhões de parâmetros incorreria.
+
+Os testes da Mistral AI mostram que o modelo supera tanto o LLaMA 70B quanto o GPT-3.5 na maioria dos benchmarks.
+
+# Avaliação e Resultados
 
 ## Mistral 7B
 
-We compared Mistral 7B to the Llama 2 family, and re-run all model evaluations ourselves for fair comparison.
+O Mistral 7B foi comparado com a família Llama 2 e todas as avaliações dos modelos foram re-executadas para uma comparação justa.
 
 ![bars](https://mistral.ai/images/news/announcing-mistral-7b/230927_bars.png)
 
-*Performance of Mistral 7B and different Llama models on a wide range of benchmarks. For all metrics, all models were re-evaluated with our evaluation pipeline for accurate comparison. Mistral 7B significantly outperforms Llama 2 13B on all metrics, and is on par with Llama 34B (since Llama 2 34B was not released, we report results on Llama 34B). It is also vastly superior in code and reasoning benchmarks.*
+*Desempenho do Mistral 7B e diferentes modelos Llama em uma ampla gama de benchmarks. Para todas as métricas, todos os modelos foram reavaliados com o pipeline de avaliação para uma comparação precisa. O Mistral 7B supera significativamente o Llama 2 13B em todas as métricas e está em pé de igualdade com o Llama 34B (já que o Llama 2 34B não foi lançado, os resultados são relatados no Llama 34B). Também é vastamente superior em benchmarks de code e reasoning.*
 
-The benchmarks are categorized by their themes:
+OS benchmarks são categorizados por tema:
 
-- Commonsense Reasoning: 0-shot average of Hellaswag, Winogrande, PIQA, SIQA, OpenbookQA, ARC-Easy, ARC-Challenge, and CommonsenseQA.
-- World Knowledge: 5-shot average of NaturalQuestions and TriviaQA.
-- Reading Comprehension: 0-shot average of BoolQ and QuAC.
-- Math: Average of 8-shot GSM8K with maj@8 and 4-shot MATH with maj@4
-- Code: Average of 0-shot Humaneval and 3-shot MBPP
-- Popular aggregated results: 5-shot MMLU, 3-shot BBH, and 3-5-shot AGI Eval (English multiple-choice questions only)
+- Commonsense Reasoning: média de 0-shot de Hellaswag, Winogrande, PIQA, SIQA, OpenbookQA, ARC-Easy, ARC-Challenge e CommonsenseQA.
+- World Knowledge: média de 5-shot de NaturalQuestions e TriviaQA.
+- Reading Comprehension: média de 0-shot de BoolQ e QuAC.
+- Math: Média de 8-shot GSM8K com maj@8 e 4-shot MATH com maj@4
+- Code: Média de 0-shot Humaneval e 3-shot MBPP
+- Popular aggregated results: 5-shot MMLU, 3-shot BBH e 3-5-shot AGI Eval (apenas perguntas de múltipla escolha em inglês)
 
 ![table](https://mistral.ai/images/news/announcing-mistral-7b/230927_table.png)
 
-An interesting metric to compare how models fare in the cost/performance plane is to compute “equivalent model sizes”. On reasoning, comprehension and STEM reasoning (MMLU), Mistral 7B performs equivalently to a Llama 2 that would be more than 3x its size. This is as much saved in memory and gained in throughput. 
+Uma métrica interessante para comparar como os modelos se saem no eixo custo/desempenho é calcular "tamanhos de modelo equivalentes". Em reasoning, comprehension e STEM reasoning (MMLU), o Mistral 7B tem desempenho equivalente a um Llama 2 que seria mais de 3x seu tamanho. Isso equivale a economia de memória e ganho de *throughput*.
 
 ![effective_sizes](https://mistral.ai/images/news/announcing-mistral-7b/230927_effective_sizes.png)
 
-*Results on MMLU, Commonsense Reasoning, World Knowledge and Reading comprehension for Mistral 7B and Llama 2 (7B/13/70B). Mistral 7B largely outperforms Llama 2 13B on all evaluations, except on knowledge benchmarks, where it is on par (this is likely due to its limited parameter count, which restricts the amount of knowledge it can compress).*
+*Resultados no MMLU, Commonsense Reasoning, World Knowledge e Reading comprehension para Mistral 7B e Llama 2 (7B/13/70B). O Mistral 7B supera amplamente o Llama 2 13B em todas as avaliações, exceto nos benchmarks de knowledge, onde está em pé de igualdade (isso provavelmente é devido à sua contagem de parâmetros limitada, que restringe a quantidade de conhecimento que pode ser comprimida).*
 
 ## Mixtral 8X7B
 
-We compare Mixtral to the Llama 2 family and the GPT3.5 base model. Mixtral matches or outperforms Llama 2 70B, as well as GPT3.5, on most benchmarks.
+O Mixtral foi comparado com a família Llama 2 e o modelo base GPT3.5. O Mixtral corresponde ou supera o Llama 2 70B, assim como o GPT3.5, na maioria dos benchmarks.
 
 ![overview](https://mistral.ai/images/news/mixtral-of-experts/overview.png)
 
-On the following figure, we measure the quality versus inference budget tradeoff. Mistral 7B and Mixtral 8x7B belong to a family of highly efficient models compared to Llama 2 models.
+Na figura a seguir, observamos o *tradeoff* entre qualidade e orçamento de inferência. O Mistral 7B e o Mixtral 8x7B pertencem a uma família de modelos altamente eficientes em comparação com os modelos Llama 2.
 
 ![scaling](https://mistral.ai/images/news/mixtral-of-experts/scaling.png)
 
-The following table give detailed results on the figure above.
+A tabela a seguir fornece resultados detalhados sobre a figura acima.
 
 ![open_models](https://mistral.ai/images/news/mixtral-of-experts/open_models.png)
 
-**Hallucination and biases.** To identify possible flaws to be corrected by fine-tuning / preference modelling, we measure the base model performance on BBQ/BOLD.
+**Alucinação e vieses.** Para identificar possíveis falhas a serem corrigidas por *fine-tuning* / *preference modelling*, foi medido o desempenho do modelo base no BBQ/BOLD.
 
 ![bbq_bold](https://mistral.ai/images/news/mixtral-of-experts/bbq_bold.png)
 
-Compared to Llama 2, Mixtral presents less bias on the BBQ benchmark. Overall, Mixtral displays more positive sentiments than Llama 2 on BOLD, with similar variances within each dimension.
+Comparado ao Llama 2, o Mixtral apresenta menos viés no benchmark BBQ. No geral, o Mixtral exibe mais sentimentos positivos do que o Llama 2 no BOLD, com variâncias semelhantes dentro de cada dimensão.
 
-**Language.** Mixtral 8x7B masters French, German, Spanish, Italian, and English.
+**Idiomas**. Mixtral 8x7B domina francês, alemão, espanhol, italiano e inglês.
 
 ![multilingual](https://mistral.ai/images/news/mixtral-of-experts/multilingual.png)
 
 # Discussão
 
-Deixar aqui os comentários e insights importantes que surgiram durante a discussão do paper com o grupo. Colocar aqui ideias de trabalhos de pesquisa que podem ser feitas a partir desse trabalho. Por exemplo, experimentar com outra base, estender a análise para outro algoritmo, modelo etc.
+- Podemos utilizar esses modelos em nossos trabalhos, tendo em vista que, com eles, conseguimos realizar tarefas como classificação, embeddings e RAG.
 
 # Replicação
 
