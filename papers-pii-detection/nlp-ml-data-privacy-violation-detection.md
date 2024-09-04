@@ -1,0 +1,65 @@
+# Metadados
+
+- Using NLP and Machine Learning to Detect Data Privacy Violations
+- Paulo Silva, Carolina Gonçalves, Carolina Godinho, Nuno Antunes, Marilia Curado
+- Department of Informatics Engineering, University of Coimbra
+- IEEE Conference on Computer Communications Workshops, INFOCOM Wksps
+- 2020
+- [link](https://ieeexplore.ieee.org/abstract/document/9162683)
+
+# Qual o problema?
+
+Privacy concerns are becoming more evident in most various sectors with recent data breaches and privacy scandals triggering the discussion. Regulations such as EU's General Data Protection Regulation (GDPR) are pressuring organizations to handle the individual's data with reinforced caution, specially PIIs (Personally Identifiable Information), which are informations that can be used to identify an individual. As information systems deal with increasingly large amounts of personal data, to comply with regulations and efficiently increase privacy assurances, it is necessary to develop mechanisms that can not only provide such privacy assurances but also with increased automation and reliability. However there is a lack of such mechanismsms to help organizations in protecting the data.
+
+# Qual a solução?
+
+## Como os autores tentam resolver o problema? Criando um algoritmo novo? uma metodologia? uma ferramenta?
+
+As it was said previously, individual's personal data should be autonomously and effectively monitored not only because of its nature, but algo its size when considering big data. As the data can be released in and unstructured format, like text, the usage ML models and NLP is naturally elegible for the task, specially NER (Named Entity Recognition). The work proposes and evaluate the usage of NER to identify, monitor and validate PIIs. The author used three well-known NPL tools in his experiment (NLTK, Stanford CoreNLP and spaCy).
+
+## Quais são os detalhes técnicos dessa solução? O que chama mais atenção? Qual a ideia geral e o que deve ser discutido em mais detalhes?
+
+The methodology to determine to which extent NLP and NER can effectively be used to reliably detect and identify PII was divided in three parts:
+
+The first part used Generic data already tagged with named entities that was found in Kaggle. In order to evaluate the performance of the tools and its models the data was partitioned in smaller chunks, in way that made possible to evaluate how the dataset size impact the models. The dataset had 1.354.149 tokens (can be words, ponctuations or numbers) and was sliced in portions (5%, 10%, 20%, 30%, 40%, 50%, 60%, 70%, 80%, 90% and 100%). The experiment was executed with all the portions, and each one of them was divided in train and test with a portion of 30% to test.
+
+The second part had an identical procedure to the first part, but with another dataset. This time, the dataset was built out of publicly available data containing PII, like contracts available in online sites and contracts from the U.S Department of Defense (DoD). After retrieving the contracts as PDF files, it was necessary to extract the information and converting it to text. Finally it was possible to tokenize the text and perform manual tagging of entities, with 68% of the entities in the dataset being tagged during the manual tagging process.
+
+The third part also had an identical procedure, but mixing datasets, additionally using U.S voters' registration data the author built a dataset composed of 120K lines of voters' data and 50K lines of the generic dataset. The main goal was to address the generalization capabilities of the models. The datasets used in train and validation steps were different, for instance, models trained with generic datasets were validated with context-specific datasets.
+
+# Como foi avaliado?
+
+The author used the classic way to evaluate ML models, by identifying the number of True Positives (TP), True Negatives (TN), False Positives (FP) and False Negatives (FN). Then used this information to calculate accuracy, precision, recall and f1-score.
+
+# Quais são os resultados?
+
+Descrever de forma sucinta os resultados. Direto ao ponto.
+
+Exemplo: O algoritmo proposto é 3x mais eficiente, em termos de tempo de execução, do que as abordagens similares avaliadas. Além disso, o algoritmo proporcionou um ganhou de 70% de throughput.
+
+# Resenha crítica
+
+Aqui é um espaço para você opinar sobre o artigo e levantar questões importantes para a discussão que você terá sobre ele. São tarefas importantes:
+
+- identificar a relação dele com o que você está estudando e como você pode usar/reusar/combinar o que foi feito no artigo com o seu trabalho;
+- identificar possíveis ameaças à validade na avaliação;
+- identificar se a implementação (quando for o caso), está disponível e se você teve tempo/chance de experimentar com ela;
+- identificar possíveis importantes questões não respondidas;
+- identificar trabalhos futuros;
+- relacionar esse trabalho com outros trabalhos similares/relacionados;
+- levantar rapidamente/superficialmente as publicações dos autores e o que eles tem feito.
+
+# Discussão
+
+Deixar aqui os comentários e insights importantes que surgiram durante a discussão do paper com o grupo.
+
+# O que eu tenho a ver com isso?
+
+- Colocar aqui ideias de trabalhos de pesquisa que podem ser feitas a partir desse trabalho. Por exemplo, experimentar com outra base, estender a análise para outro algoritmo, modelo etc. Colocar também como isso se relaciona com o que você está fazendo ou pretende fazer. O que dá para extrair, comparar, evoluir desse trabalho que tem relação com o seu.
+
+# Replicação
+
+- Onde estão os dados?
+- Onde está o código?
+- Conseguiu entender/rodar?
+- Dá para replicar o experimento/estudo?
