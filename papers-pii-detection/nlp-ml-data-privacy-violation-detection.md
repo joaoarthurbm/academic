@@ -33,7 +33,9 @@ The author used the classic way to evaluate ML models, by identifying the number
 
 # Quais são os resultados?
 
-Descrever de forma sucinta os resultados. Direto ao ponto.
+Using the entire generic dataset the Stanford CoreNLP and spaCy obtained the best results: 0.84 and 0.86 values of f1-score respectively. The amount of time needed for training Stanford CoreNLP and spaCy was 120 and 2000 minutes respectively. The worst result was from NLTK with 0.67 of f1-score, but it was the fastest model, training in 75 seconds.
+
+Using the public available data with PII, the Stanford CoreNLP and spaCy reached the best results, that was approximately 0.90 of f1-score. It was necessary a great amount of time to train the models.
 
 Exemplo: O algoritmo proposto é 3x mais eficiente, em termos de tempo de execução, do que as abordagens similares avaliadas. Além disso, o algoritmo proporcionou um ganhou de 70% de throughput.
 
