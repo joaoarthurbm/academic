@@ -35,9 +35,9 @@ The author used the classic way to evaluate ML models, by identifying the number
 
 Using the entire generic dataset the Stanford CoreNLP and spaCy obtained the best results: 0.84 and 0.86 values of f1-score respectively. The amount of time needed for training Stanford CoreNLP and spaCy was 120 and 2000 minutes respectively. The worst result was from NLTK with 0.67 of f1-score, but it was the fastest model, training in 75 seconds.
 
-Using the public available data with PII, the Stanford CoreNLP and spaCy reached the best results, that was approximately 0.90 of f1-score. It was necessary a great amount of time to train the models.
+Using the public available data with PII, the Stanford CoreNLP and spaCy reached the best results, that was approximately 0.90 of f1-score. It was necessary a great amount of time to train the models. The greatest time of training was 6500 seconds with spaCy. The less positive aspect was the time necessary to hand-labeling the data before fedding it to the model, each document took an average of 4.75 hours of work. One of the results is that the models perform similarly regardless of having generic or PII-specific content.
 
-Exemplo: O algoritmo proposto é 3x mais eficiente, em termos de tempo de execução, do que as abordagens similares avaliadas. Além disso, o algoritmo proporcionou um ganhou de 70% de throughput.
+Using the mixed dataset, the only tool used was spaCy, since it was the only one that supported re-training. The results were not good when validating with 20% of the generic dataset. Using a validation dataset that resembles more to the re-training dataset shows better results.
 
 # Resenha crítica
 
