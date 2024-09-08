@@ -1,21 +1,21 @@
 # Metadados
 
-- Using NLP and Machine Learning to Detect Data Privacy Violations
-- Paulo Silva, Carolina Gonçalves, Carolina Godinho, Nuno Antunes, Marilia Curado
-- Department of Informatics Engineering, University of Coimbra
-- IEEE Conference on Computer Communications Workshops, INFOCOM Wksps
-- 2020
+- **Título:** Using NLP and Machine Learning to Detect Data Privacy Violations
+- **Autores:** Paulo Silva, Carolina Gonçalves, Carolina Godinho, Nuno Antunes, Marilia Curado
+- **Researches Institution:** Department of Informatics Engineering, University of Coimbra
+- **Where it was published:** IEEE Conference on Computer Communications Workshops, INFOCOM Wksps
+- **Year of publication:** 2020
 - [link](https://ieeexplore.ieee.org/abstract/document/9162683)
 
 # Qual o problema?
 
-Privacy concerns are becoming more evident in most various sectors with recent data breaches and privacy scandals triggering the discussion. Regulations such as EU's General Data Protection Regulation (GDPR) are pressuring organizations to handle the individual's data with reinforced caution, specially PIIs (Personally Identifiable Information), which are informations that can be used to identify an individual. As information systems deal with increasingly large amounts of personal data, to comply with regulations and efficiently increase privacy assurances, it is necessary to develop mechanisms that can not only provide such privacy assurances but also with increased automation and reliability. However there is a lack of such mechanismsms to help organizations in protecting the data.
+Privacy concerns are becoming more evident in most various sectors with recent data breaches and privacy scandals are triggering the discussion. Regulations such as EU's General Data Protection Regulation (GDPR) are pressuring organizations to handle the individual's data with reinforced caution, specially PIIs (Personally Identifiable Information), which are informations that can be used to identify an individual. As information systems deal with increasingly large amounts of personal data, to comply with regulations and efficiently increase privacy assurances, it is necessary to develop mechanisms that can not only provide such privacy assurances but also with increased automation and reliability. However there is a lack of such mechanisms to help organizations in protecting the data.
 
 # Qual a solução?
 
 ## Como os autores tentam resolver o problema? Criando um algoritmo novo? uma metodologia? uma ferramenta?
 
-As it was said previously, individual's personal data should be autonomously and effectively monitored not only because of its nature, but algo its size when considering big data. As the data can be released in and unstructured format, like text, the usage ML models and NLP is naturally elegible for the task, specially NER (Named Entity Recognition). The work proposes and evaluate the usage of NER to identify, monitor and validate PIIs. The author used three well-known NPL tools in his experiment (NLTK, Stanford CoreNLP and spaCy).
+As it was said previously, individual's personal data should be autonomously and effectively monitored not only because of its nature, but also its size when considering big data. As the data can be released in and unstructured format, like text, the usage ML models and NLP is naturally elegible for the task, specially NER (Named Entity Recognition). The work proposes and evaluate the usage of NER to identify, monitor and validate PIIs. The author used three well-known NLP tools in his experiment (NLTK, Stanford CoreNLP and spaCy).
 
 ## Quais são os detalhes técnicos dessa solução? O que chama mais atenção? Qual a ideia geral e o que deve ser discutido em mais detalhes?
 
@@ -41,27 +41,22 @@ Using the mixed dataset, the only tool used was spaCy, since it was the only one
 
 # Resenha crítica
 
-Aqui é um espaço para você opinar sobre o artigo e levantar questões importantes para a discussão que você terá sobre ele. São tarefas importantes:
+I could not understand quite well the results of the execution of the models over the mixed dataset, because the author explains that the only model used was spaCy, because it was the only one that supports re-training, but I could not find in teh article other place where they talk about re-train models.
 
-- identificar a relação dele com o que você está estudando e como você pode usar/reusar/combinar o que foi feito no artigo com o seu trabalho;
-- identificar possíveis ameaças à validade na avaliação;
-- identificar se a implementação (quando for o caso), está disponível e se você teve tempo/chance de experimentar com ela;
-- identificar possíveis importantes questões não respondidas;
-- identificar trabalhos futuros;
-- relacionar esse trabalho com outros trabalhos similares/relacionados;
-- levantar rapidamente/superficialmente as publicações dos autores e o que eles tem feito.
+This article is relevant in the context of PII identification in unstructured text, which is probably the main goal of my future research, to train a model to perform this task considering Brazillian data. I believe that the experiment methodology can be re-used in a future experiment during my own research.
+
+My research can be a future work, by trying to use the same methodology, maybe even the same models over Brazillian PIIs, but since we are seeing the boom of LLMs, it can be another possible path for the research.
 
 # Discussão
 
-Deixar aqui os comentários e insights importantes que surgiram durante a discussão do paper com o grupo.
+Deixar aqui os comentários e insights importantes que surgiram durante a discussão do paper com o grupo. [TODO]
 
 # O que eu tenho a ver com isso?
 
-- Colocar aqui ideias de trabalhos de pesquisa que podem ser feitas a partir desse trabalho. Por exemplo, experimentar com outra base, estender a análise para outro algoritmo, modelo etc. Colocar também como isso se relaciona com o que você está fazendo ou pretende fazer. O que dá para extrair, comparar, evoluir desse trabalho que tem relação com o seu.
+I believe that the methodoloy can be re-used in my own research in order to train models to detect Brazillian PIIs in unstructured text.
 
 # Replicação
 
-- Onde estão os dados?
-- Onde está o código?
-- Conseguiu entender/rodar?
-- Dá para replicar o experimento/estudo?
+- The date used was not found
+- The code used was not Found
+- Since the code of the models used is apparently easy to replicate, we could try replicate the methodology with another dataset.
