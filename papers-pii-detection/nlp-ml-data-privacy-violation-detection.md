@@ -1,6 +1,6 @@
 # Metadados
 
-- **Título:** Using NLP and Machine Learning to Detect Data Privacy Violations
+- **Title:** Using NLP and Machine Learning to Detect Data Privacy Violations
 - **Autores:** Paulo Silva, Carolina Gonçalves, Carolina Godinho, Nuno Antunes, Marilia Curado
 - **Researches Institution:** Department of Informatics Engineering, University of Coimbra
 - **Where it was published:** IEEE Conference on Computer Communications Workshops, INFOCOM Wksps
@@ -9,7 +9,7 @@
 
 # Qual o problema?
 
-Privacy concerns are becoming more evident in most various sectors with recent data breaches and privacy scandals are triggering the discussion. Regulations such as EU's General Data Protection Regulation (GDPR) are pressuring organizations to handle the individual's data with reinforced caution, specially PIIs (Personally Identifiable Information), which are informations that can be used to identify an individual. As information systems deal with increasingly large amounts of personal data, to comply with regulations and efficiently increase privacy assurances, it is necessary to develop mechanisms that can not only provide such privacy assurances but also with increased automation and reliability. However there is a lack of such mechanisms to help organizations in protecting the data.
+Privacy concerns are becoming more evident in most various sectors with recent data breaches and privacy scandals triggering the discussion. Regulations such as EU's General Data Protection Regulation (GDPR) are pressuring organizations to handle the individual's data with reinforced caution, specially PIIs (Personally Identifiable Information), which are informations that can be used to identify an individual. As information systems deal with increasingly large amounts of personal data, to comply with regulations and efficiently increase privacy assurances, it is necessary to develop mechanisms that can not only provide such privacy assurances but also with increased automation and reliability. However there is a lack of such mechanisms to help organizations in protecting the data.
 
 # Qual a solução?
 
@@ -47,6 +47,8 @@ This article is relevant in the context of PII identification in unstructured te
 
 My research can be a future work, by trying to use the same methodology, maybe even the same models over Brazillian PIIs, but since we are seeing the boom of LLMs, it can be another possible path for the research.
 
+We could search sources of public available data, as the authors have done in their research.
+
 # Discussão
 
 Deixar aqui os comentários e insights importantes que surgiram durante a discussão do paper com o grupo. [TODO]
@@ -57,6 +59,6 @@ I believe that the methodoloy can be re-used in my own research in order to trai
 
 # Replicação
 
-- The date used was not found
+- The data used was not found
 - The code used was not Found
 - Since the code of the models used is apparently easy to replicate, we could try replicate the methodology with another dataset.
