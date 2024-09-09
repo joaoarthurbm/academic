@@ -43,6 +43,8 @@ Using the mixed dataset, the only tool used was spaCy, since it was the only one
 
 I could not understand quite well the results of the execution of the models over the mixed dataset, because the author explains that the only model used was spaCy, because it was the only one that supports re-training, but I could not find in teh article other place where they talk about re-train models.
 
+They could have detailed more how was the process of labelling the data and the final format of the data, in order to make it easier to replicate.
+
 This article is relevant in the context of PII identification in unstructured text, which is probably the main goal of my future research, to train a model to perform this task considering Brazillian data. I believe that the experiment methodology can be re-used in a future experiment during my own research.
 
 My research can be a future work, by trying to use the same methodology, maybe even the same models over Brazillian PIIs, but since we are seeing the boom of LLMs, it can be another possible path for the research.
