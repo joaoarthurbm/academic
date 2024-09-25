@@ -16,13 +16,13 @@ Benchmarks recentes têm aprimorado e apresentado técnicas robustas para a aval
 
 ## Como os autores tentam resolver o problema?
 
-Os autores criaram o C-EVAL, primeiro conjunto de avaliação compreensiva do contexto chinês, que avalia minuciosamente o conhecimento avançado e as habilidades de raciocínio dos LLMs chineses. O C-EVAL consiste em questões de exame de múltipla escolha abrangendo diversas disciplinas. Além disso, os autores introduziram o C-EVAL HARD como um benchmark complementar, que é um subconjunto de disciplinas desafiadoras do C-EVAL, exigindo habilidades de raciocínio altamente avançadas para serem resolvidas.
+Os autores criaram o C-EVAL, primeiro conjunto de avaliação compreensiva do contexto chinês, que avalia minuciosamente o conhecimento avançado e as habilidades de raciocínio dos LLMs chineses. O C-EVAL consiste em questões de exames de múltipla escolha abrangendo diversas disciplinas. Além disso, os autores introduziram o C-EVAL HARD como um benchmark complementar, que é um subconjunto de disciplinas desafiadoras do C-EVAL, exigindo habilidades de raciocínio altamente avançadas para serem resolvidas.
 
 ## Quais são os detalhes técnicos dessa solução?
 
 Foram coletadas 13.948 perguntas a partir de simulados e exames locais de pequena escala, visando desviar dos exames nacionais de fácil acesso que podem ter feito parte do pré-treinamento dos LLMS. Além disso, boa parte das amostras foram coletadas a partir de documentos PDF ou Microsoft Word na Internet, ao invés de perguntas estruturadas diretamente. Esses documentos foram analisados e anotados pelos autores para obter o formato estruturado final, processo que frequentemente envolveu conversão de equações em LATEX, o que minimizou ainda mais o risco de contaminação de dados.
 
-Foram selecionadas apenas questões no formato de múltipla escolha, similar ao trabalho de Hendrycks et al. Isso porque a métricas está claramente definida (ou seja, precisão), e perguntas de múltipla escolha são uma forma simples, mas eficaz, de avaliar o potencial de habilidades avançadas desses modelos. As perguntas no C-EVAL abrangem 52 disciplinas diversas, que posteriormente foram agrupadas em categorias mais amplas como ciências exatas e tecnológicas, humanidades, ciências sociais e outras áreas. Cada pergunta tem 4 opções, sendo apenas uma a resposta correta. Os LLMs foram projetados para resolver essas perguntas por meio de instruções.
+Foram selecionadas apenas questões no formato de múltipla escolha, similar ao trabalho de Hendrycks et al. Isso porque a métrica, nesse caso, está claramente definida (ou seja, precisão), e perguntas desse estilo são uma forma simples, mas eficaz, de avaliar o potencial de habilidades avançadas dos modelos. As perguntas abrangem 52 disciplinas diversas, que posteriormente foram agrupadas em categorias mais amplas como ciências exatas e tecnológicas, humanidades, ciências sociais e outras áreas. Cada pergunta tem 4 opções, sendo apenas uma a resposta correta. Os LLMs foram projetados para resolver essas perguntas por meio de instruções.
 
 # Como foi avaliado?
 
