@@ -45,7 +45,7 @@ O GPT-4 foi o único modelo que superou 60% de precisão média por área de con
 
 # Discussão
 
-O experimento apresentado pelo artigo pode ser reaplicado em qualquer outro contexto de linguagem humana. A dificuldade do experimento se encontra na construção de uma base de dados específica para cada contexto, pois a extração de perguntas e respostas a partir de exames nacionais pode ser um processo bastante complexo e demorado.
+O experimento apresentado pelo artigo pode ser reaplicado em qualquer outro contexto geográfico. A dificuldade do experimento se encontra na construção de uma base de dados específica para cada contexto, pois a extração de perguntas e respostas a partir de exames nacionais pode ser um processo complexo e demorado.
 
 # O que eu tenho a ver com isso?
 
