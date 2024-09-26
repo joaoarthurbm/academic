@@ -1,7 +1,7 @@
 
 # Metadados
 
-Título: *"LLM-based NLG Evaluation: Current Status and Challenges"*
+* Título: *"LLM-based NLG Evaluation: Current Status and Challenges"*
 * Autores: *Mingqi Gao, Xinyu Hu, Jie Ruan , Xiao Pu , Xiaojun Wan*
 * Instituição(ões) envolvida(s) na pesquisa: *Peking University*
 * Ano de publicação: *2024*
