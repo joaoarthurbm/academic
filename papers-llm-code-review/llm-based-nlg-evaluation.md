@@ -108,4 +108,4 @@ Não foi relatada nenhuma preocupação com vieses culturais, o que pode ser um 
 
 # Replicação
 
-O artigo cita diversos outros estudos, por mais que uma certa parte deles sejam proprietarios e não possuam bases e codigo aberto, uma boa quantidade possui essa informações disponivéis.
+O artigo cita diversos outros estudos. Apenas uma parte deles possui bases de código aberto.
