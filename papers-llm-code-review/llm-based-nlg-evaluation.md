@@ -47,7 +47,7 @@ O artigo utiliza uma abordagem metodológica abrangente para avaliar as diferent
 -   **Natureza dos Dados**: O artigo se concentra em dados textuais gerados por modelos NLG e em suas respectivas avaliações por humanos. Para cada uma das abordagens, os dados divergem em nível de idioma e estrutura.
 
 # Quais são os resultados?
-Os resultados indicam que os métodos baseados em LLMs demonstram uma correlação significativamente maior com as avaliações humanas quando comparados às métricas tradicionais. O prompting de LLMs continua sendo a métrica mais utilizada entre as quatro principais categorias, embora o artigo aponte que o uso de uma avaliação colaborativa possa funcionar melhor.
+Os resultados indicam que os métodos baseados em LLMs demonstram uma correlação significativamente maior com as avaliações humanas quando comparados às métricas tradicionais. O prompting de LLMs continua sendo a métrica mais utilizada entre as quatro principais categorias, embora o artigo aponte que o uso de uma avaliação colaborativa com seres humanos possa funcionar melhor.
 
 Um resultado relevante é o relatório de prós e contras de cada abordagem, sendo eles:
 
