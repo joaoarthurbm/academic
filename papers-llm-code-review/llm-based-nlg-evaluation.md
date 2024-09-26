@@ -5,7 +5,7 @@ Título: *"LLM-based NLG Evaluation: Current Status and Challenges"*
 Autores: *Mingqi Gao, Xinyu Hu, Jie Ruan , Xiao Pu , Xiaojun Wan*
 Instituição(ões) envolvida(s) na pesquisa: *Peking University*
 Ano de publicação: *2024*
-Link para acesso: [LLM-based NLG Evaluation: Current Status and Challenges](https://arxiv.org/pdf/2402.01383)
+* Link para acesso: [LLM-based NLG Evaluation: Current Status and Challenges](https://arxiv.org/pdf/2402.01383)
 
 # Qual o problema?
 O artigo discute a inadequação das métricas convencionais de avaliação de Geração de Linguagem Natural (NLG) para avaliar com exatidão a qualidade do texto produzido por modelos de linguagem, especialmente em um cenário onde as expectativas e os critérios de avaliação estão em constante mudança. As métricas tradicionais, como BLEU e ROUGE, não conseguem capturar sutilezas semânticas e a qualidade do conteúdo, resultando em uma correlação insuficiente com as avaliações humanas. Métricas baseadas em modelos de Deep Learning, como BertScore e BartScore, foram propostas para resolver esse problema, mas ainda são insuficientes para a avaliação de escopos mais amplos, como os de NLG em LLMs.
