@@ -95,7 +95,7 @@ Os autores continuam pesquisando o uso de LLMs. Publicações interessantes incl
 
 # Discussão
 Muitas conclusões interessantes podem ser retiradas do artigo e de suas citações o que podem guiar discussões interessantes, como por exemplo:
-- Uso de LLMs para melhor criterios de avaliação tendem a beneficiar o processo como um todo;
+- Usar LLMs para melhorar critérios de avaliação tende a beneficiar o processo como um todo;
 - Cénarios em que há descrição de tarefas e passos de avaliação não há diferença relevante para prompting zero-shot e one-shot;
 - GPT-3.5 e GPT-4 já atingiram o estado da arte para tarefas de avaliação de qualidade de tradução;
 - GPT-3.5 e GPT-4 superam métricas baseadas em encoders para avaliação de ranking;
