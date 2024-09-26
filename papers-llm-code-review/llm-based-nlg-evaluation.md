@@ -98,7 +98,7 @@ Muitas conclusões interessantes podem ser retiradas do artigo e de suas citaç�
 - Usar LLMs para melhorar critérios de avaliação tende a beneficiar o processo como um todo;
 - Não há diferença relevante entre o uso de prompting zero-shot e one-shot nos cenários em que há descrição de tarefas e passos de avaliação.
 - GPT-3.5 e GPT-4 já atingiram o estado da arte para tarefas de avaliação de qualidade de tradução;
-- GPT-3.5 e GPT-4 superam métricas baseadas em encoders para avaliação de ranking;
+- GPT-3.5 e GPT-4 superam métricas baseadas em encoders para avaliação de ranking.
 
 # O que eu tenho a ver com isso?
 
