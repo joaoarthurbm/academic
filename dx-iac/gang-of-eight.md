@@ -51,7 +51,7 @@ Assim, foi construindo três datasets de repositórios OpenSources que são mant
 
 Além disso, os autores analisam a frequência das categorias de defeitos que aparecem em scripts IaC, por meio da seguinte métrica:
 
-![Métrica utilizada](CodeCogsEqn.png)
+![Métrica utilizada](gang-of-eight-metric.png)
 
 # Quais são os resultados?
 
