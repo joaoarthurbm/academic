@@ -1,5 +1,3 @@
-Template para guiar a leitura de artigos.
-
 # Metadados
 
 * **Título**: Gang of Eight: A Defect Taxonomy for Infrastructure as Code
