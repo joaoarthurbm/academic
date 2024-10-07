@@ -38,7 +38,7 @@ Os autores propõem uma ferramenta (ACID - Automated Categorizer for Infrastruct
 A ACID utiliza a técnica de *descriptive coding* para ser feita a análise qualitativa dos ECM.
 
 Exemplo do processo de derivação das categorias utilizando _descriptive coding_:
-![derivação das categorias utilizando descriptive coding](https://drive.google.com/uc?export=view&id=1t-2Quo6oUMOOwO3Mr955H6N2iHBkZ54t)
+![derivação das categorias utilizando descriptive coding](gof8-process-deriving.png)
 
 # Como foi avaliado?
 
@@ -53,28 +53,32 @@ Assim, foi construindo três datasets de repositórios OpenSources que são mant
 
 Além disso, os autores analisam a frequência das categorias de defeitos que aparecem em scripts IaC, por meio da seguinte métrica:
 
-![alt text](CodeCogsEqn.png)
-
+![Métrica utilizada](CodeCogsEqn.png)
 
 # Quais são os resultados?
 
 - Dados de Configuração é a categoria mais frequente de acordo com a métrica estabelecida e também a mais domintante entre os 4 datasets.
 - Network é a subcategoria mais frequente: 75.3%~88.2% dos erros identificados de dados de configurações são de network.
-- Idempotência é a categoria menos frequente.
+- Idempotência é a categoria menos frequente de acordo com a métrica estabelecida.
 - Entre todos os repositórios observados, incluem pelo menos um das oito categorias, porém não mais 4 categorias ao mesmo tempo.
-
 
 # Resenha crítica
 
-O artigo faz a categorização dos defeitos que ocorrem em arquivos de infraestrutura, é bastante pertinente a análise dele porém ela pode ser em muitos casos bastante falha, visto que é somente levado em consideração as ECMs, para aprofundar o estudo acredito que seja necessário também levar em consideração o estado do código naquele momento, para que assim seja feito uma análise mais precisa.
+O artigo categoriza os defeitos que ocorrem em arquivos de infraestrutura, e sua análise é bastante relevante. No entanto, ela pode apresentar limitações, pois leva em consideração apenas as ECMs. Para aprofundar o estudo, acredito que seja necessário considerar também o estado do código no momento da ocorrência do defeito, possibilitando uma análise mais precisa.
 
-A categorização dos erros é com base em erros já existentes, tenho fé que os conceitos propostos poderiam ser mais precisos em suas definições. Nessa linha de raciocínio, tal coisa pode não ter sido feita pois os autores não consideraram os pedaços de código do estado do arquivo IaC quando o defeito era identificado nos commits. 
+A categorização dos erros baseia-se em falhas já conhecidas, mas acredito que os conceitos propostos poderiam ser mais precisos em suas definições. Seguindo esse raciocínio, pode ser que tal abordagem não tenha sido feita porque os autores não consideraram os trechos de código no estado do arquivo IaC quando o defeito foi identificado nos commits.
 
-Os resultados foram limitados ao Puppet, foi dito que existem evidências que a categorização proposta exitem em diferentes linguagem IaC, porém tais dados não foram aprofundados, além disso é reforçado que a ferramenta ACID é independente de linguagens, porém ela fica limitada à análise de ECMs, não levando em consideração o código.
+Além disso, os resultados foram limitados ao Puppet. Embora o artigo mencione que há evidências de que a categorização proposta se aplica a diferentes linguagens de IaC, esses dados não foram explorados em profundidade.
 
 # Discussão
 
 Deixar aqui os comentários e insights importantes que surgiram durante a discussão do paper com o grupo. 
+
+* Replicar a análise nos repositórios da VTEX e fazer a comparação com as categorias do gang of eight.
+
+* Por qual motivo a Idempotência apresentou a menor quantidade de categorização? 
+
+* Identificar Fix Pattern e não ficar dependente dos comentários em commit, saber a possibilidade de falha pré-commit. 
 
 # O que eu tenho a ver com isso?
 
@@ -85,9 +89,12 @@ Essa identificação é crucial no contexto do Cloud Drift Monitor, pois precisa
 # Replicação
 
 * Onde estão os dados?
+    - Em um FigShare inexistente, vou mandar um email.
 * Onde está o código?
     - [Automated Categorizer for Infrastructure as Code Defects (ACID)](https://hub.docker.com/r/akondrahman/acid-puppet)
     - [Github Link](https://github.com/akondrahman/IaC_Defect_Categ_Revamp)
 * Conseguiu entender/rodar? 
-* Dá para replicar o experimento/estudo? Sim!
+    - Estou trabalhando nisso, porém dá pra rodar!
+* Dá para replicar o experimento/estudo? 
+    - Sim!
 
