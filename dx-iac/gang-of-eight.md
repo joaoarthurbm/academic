@@ -11,7 +11,7 @@ Scripts](https://doi.org/10.1145/3377811.3380409)
 
 # Qual o problema?
 
-Os códigos de _Infrastructure as a code_ (IaC) podem apresentar inúmeros tipos de defeitos, atualmente os erros não são agrupados por características em comum, caso fosse feito uma categorização poderíamos identificar os erros e realizar as suas correções de maneira mais rápida e eficiente.
+O conhecimento sobre os tipos de erros em arquivos IaC não é estruturado. Atualmente, não há caracterização acerca dos erros em arquivos IaC.
 
 # Qual a solução?
 
@@ -69,8 +69,6 @@ A categorização dos erros baseia-se em falhas já conhecidas, mas acredito que
 Além disso, os resultados foram limitados ao Puppet. Embora o artigo mencione que há evidências de que a categorização proposta se aplica a diferentes linguagens de IaC, esses dados não foram explorados em profundidade.
 
 # Discussão
-
-Deixar aqui os comentários e insights importantes que surgiram durante a discussão do paper com o grupo. 
 
 * Replicar a análise nos repositórios da VTEX e fazer a comparação com as categorias do gang of eight.
 
