@@ -39,17 +39,26 @@ Exemplo do processo de derivação das categorias utilizando _descriptive coding
 ![derivação das categorias utilizando descriptive coding](gof8-process-deriving.png)
 
 # Como foi avaliado?
+### Coleta de Dados
 
-Os autores testaram a ferramenta testando em alguns repositórios open source, para isso foram estabelecidos alguns critérios para escolha desses repositórios, como:
+A avaliação da ferramenta foi realizada através de experimentos em repositórios open source. Para a seleção dos repositórios, os autores estabeleceram critérios específicos, como:
 
 1. Pelo menos 11% dos arquivos do repositório tem que ser script IaC.
 2. O repositório não pode ser uma cópia de outro repositório.
 3. Deve conter pelo menos dois commit por mês.
 4. Ter mais pelo menos 10 contribuidores.
 
-Assim, foi construindo três datasets de repositórios OpenSources que são mantidos por três organizações: Mozila, Openstack e Wikimedia Commons. O critério de escolha dessas organizações foi a alta utilização de serviços de cloud. Além desses três dataset, foi criado mais um de repositórios OpenSources mantidos no GitHub.
+Com base nesses critérios, foram construídos três datasets de repositórios OpenSources que são mantidos por três organizações: Mozila, Openstack e Wikimedia Commons. Essas organizações foram escolhidas devido ao uso intenso de serviços de cloud. 
 
-Além disso, os autores analisam a frequência das categorias de defeitos que aparecem em scripts IaC, por meio da seguinte métrica:
+Além desses três dataset principais, foi criado um quarto dataset com repositórios open source hospedados no GitHub que se enquadram nos critérios estabelecidos. 
+
+### Caracterização
+
+Após isso, a ferramenta ACID proposta pelos autores analisou os ECM dos repositórios e com isso fez a identificação dos defeitos IaC encontrados naqueles repositórios e assim categorizá-los.
+
+A categorização é definida verificando se as palavras chaves do ECM fazem parte do conjunto de palavras pré-definidas de cada categoria.
+
+Por fim, foi definido uma métrica para verificar a frequência das categorias de defeitos que aparecem em scripts IaC em cada um dos 4 datasets.
 
 ![Métrica utilizada](gang-of-eight-metric.png)
 
