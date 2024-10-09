@@ -64,8 +64,34 @@ Por fim, foi definido uma métrica para verificar a frequência das categorias d
 
 # Quais são os resultados?
 
+Os resultados são: foram identificados as 8 categorias de defeito propostas. As categorias e suas respectivas frequências relativas aos 4 dataset são:
+
+| Categoria                 | Frequência Absoluta | Frequência Relativa % |
+|---------------------------|---------------------|-----------------------|
+| Dados de Configuração     | 7245                | 52,66% |
+| Sintaxe                   | 2158                | 15,68% |
+| Dependência               | 1535                | 11,15% |
+| Documentação              | 1296                | 9,42% |
+| Servico                   | 1003                | 7,29% |
+| Segurança                 | 219                 | 1,59% |
+| Condicional               | 206                 | 1,49% |
+| Idempotência              | 94                  | 0,68% |
+| Total                     | 13756               | 100 % |
+
+Durante o estudo, foi identificada a predominância dos Dados de Configuração. Portanto, tornou-se necessário dividi-los em cinco subcategorias. 
+A seguir, apresentamos as subcategorias e suas respectivas proporções de defeitos. É importante ressaltar que duas ou mais 
+subcategorias podem estar presentes em uma mesma categoria de dado de configuração:
+
+| Categoria         | GitHub | Mozilla | OpenStack | Wikimedia |
+|-------------------|--------|---------|-----------|-----------|
+| Cache             | 0.6    | 0.7     | 0.6       | 1.0       |
+| Data Storage      | 13.6   | 7.6     | 24.8      | 16.9      |
+| File              | 19.1   | 12.1    | 13.9      | 19.5      |
+| Network           | 80.0   | 88.2    | 85.2      | 79.3      |
+| User Credential   | 11.6   | 7.6     | 18.3      | 12.2      |
+
 - Dados de Configuração é a categoria mais frequente de acordo com a métrica estabelecida e também a mais domintante entre os 4 datasets.
-- Network é a subcategoria mais frequente: 75.3%~88.2% dos erros identificados de dados de configurações são de network.
+- Network é a subcategoria mais frequente: 79.3%~88.2% dos erros identificados de dados de configurações são de network.
 - Idempotência é a categoria menos frequente de acordo com a métrica estabelecida.
 - Entre todos os repositórios observados, incluem pelo menos um das oito categorias, porém não mais 4 categorias ao mesmo tempo.
 
@@ -94,7 +120,7 @@ Essa identificação é crucial no contexto do Cloud Drift Monitor, pois precisa
 # Replicação
 
 * Onde estão os dados?
-    - Em um FigShare inexistente, vou mandar um email.
+    - Nesse link [Dataset And Source Code](https://doi.org/10.6084/m9.figshare.8986634.v1)
 * Onde está o código?
     - [Automated Categorizer for Infrastructure as Code Defects (ACID)](https://hub.docker.com/r/akondrahman/acid-puppet)
     - [Github Link](https://github.com/akondrahman/IaC_Defect_Categ_Revamp)
