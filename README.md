@@ -9,6 +9,10 @@ Template para guiar a leitura de artigos.
 * Ano de publicação
 * link
 
+# Seu resumo
+
+Escreva o resumo **curto** do artigo. Siga esse template  [aqui](https://medium.com/@joaoarthurbm/projeto-de-trabalho-de-conclus%C3%A3o-de-curso-como-escrever-o-resumo-da-proposta-3ee806694797)
+
 # Qual o problema?
 
 Aqui é importante ser claro e conciso sobre o problema que o artigo aborda. Claro, pode haver mais de um ou desdobramentos do mesmo, mas tipicamente é muito claro o problema que os autores estão tentando resolver. Cuidado aqui para não cair na armadilha de responder algo como "um sistema de recomendação para..." ou "um algoritmo para... " ou "construir uma ferramenta para...". Esses não são problemas, são soluções. Problema tipicamente é "lentidão do algoritmo XPTO"; "dificuldade em revisar grandes PRs"; etc.
