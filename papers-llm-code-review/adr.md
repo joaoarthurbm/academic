@@ -1,5 +1,3 @@
-Template para guiar a leitura de artigos.
-
 # Metadados
 
 - Título: Using Architecture Decision Records in Open Source Projects—An MSR Study on GitHub
@@ -7,9 +5,9 @@ Template para guiar a leitura de artigos.
 - De que instituições são os autores? Karriere.at GmbH, Software Competence Center Hagenberg GmbH, St. Pölten University of Applied Sciences e Johannes Kepler University Linz
 - Onde foi publicado: IEEE Access
 - Ano de publicação: 2023
-- Link: Digital Object Identifier 10.1109/ACCESS.2023.3287654
+- Link: [Using Architecture Decision Records in Open Source Projects](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10155430)
 
-# Qual o problema?
+# qual o problema?
 
 O problema central abordado pelo artigo é a falta de evidências sobre a adoção prática de Architecture Decision Records (ADRs) em projetos de software, apesar de sua proposta como solução leve para documentar decisões arquiteturais. Os autores destacam que, embora os ADRs tenham sido sugeridos em 2011 para combater a "vaporização do conhecimento arquitetural" (perda do contexto das decisões tomadas ao longo do tempo).
 
