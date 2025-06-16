@@ -69,14 +69,17 @@ anterior. Três métodos foram aplicados em sequência para definir a
 categorização de outros *bad smells* na linguagem:
 
 
-Primeiramente, no estudo original, foi feita uma busca manual em
+No estudo original, foi feita uma busca manual em
 *grey literature* e no GitHub, selecionando os documentos utilizando critérios de
 relevância para o contexto das duas RQs. A partir disso, foi
 proposto um catálogo de *bad smells* de natureza empírica, se dividindo em específicos e
 tradicionais. 
 
-Segundamente, os autores publicaram os resultados e catálogo em
-um repositório público no GitHub. Em seguida, convidaram os desenvolvedores
+Assim, emergiram 29 code *smells* deste passo, 11 foram classsificados como 
+*smells* tradicionais e os outros 18 foram classsificados como *Elixir-specific smells*.
+Além disso, os *Elixir-specific smells* foram divididos em dois grupos: *DESIGN-RELATED*, 
+que envolve 10 dos *smells* e *LOW-LEVEL CONCERNS*. Em seguida, os autores publicaram os resultados e catálogo em
+um [repositório público no GitHub](https://github.com/lucasvegi/Elixir-Code-Smells.git) e convidaram os desenvolvedores
 de Elixir a abrir *issues* e *pull requests* no projeto, que se tornou popular,
 ranqueando entre os 100 projetos de Elixir mais acessados no
 GitHub. Dessa forma, 25 documentos - 13 *issues* e 12 *pull
@@ -85,19 +88,28 @@ autores do artigo, resultando em 27 melhorias no catálogo.
 
 Na sequência, para expandir o catálogo, foram minerados, no GitHub,
 repositórios a procura de *artifacts* - *issues*, *pull requests*,
-*commits* e arquivos - referentes a *code smells*. Os artifacts foram
-identificados utilizando o
-método de mineração de *Dabic et al*. Ao fim desta etapa, foram
-detectados 301
-*artifacts*, dos quais 41 foram selecionados, utilizando
-critério *Garousi’s Authority of the Producer* (*Garousi et al.*
-2019)".
+*commits* e arquivos - referentes a *code smells*. 
+Os artifacts foram identificados utilizando o
+método de mineração de *Dabic et al*. O método determina dois passos 
+sequenciais para mineração de repositórios: a definição de critérios de 
+seleção dos repositórios para filtrar os relacionados as RQs; a execução de uma
+*search query* para recuperar dados contextualizados dos repositórios. Ao fim desta etapa, foram detectados 
+301 *artifacts*, dos quais os autores selecionaram os mais relevantes, 
+eliminando os *artifacts* previamente vistos na busca manual em *grey literature*. Além disso, adaptaram o critério 
+*Garousi’s Authority of the Producer* (*Garousi et al.*2019)" para o contexto do estudo. Dessa forma, os *artifacts* deveriam 
+seguir três critérios para serem selecionados:
+
+* O *artifact* foi publicado em um repositório que trabalha com *Elixir*?
+* O autor é um desenvolvedor associado com uma empresa que trabalha com *Elixir*?
+* O autor tem repositórios com código em *Elixir*? 
+
+Esse processo resultou em 46 *artifacts* que foram úteis para detecção de novos *smells*.
 
 Por último, o primeiro autor leu e analisou em detalhes o
-conteúdo de cada *artifact*, a fim de caracterizar *code smells* em
+conteúdo de cada *artifact*, a fim de caracterizar os *smells* em
 Elixir - tradicionais ou específicos. Na sequência, o segundo
-autor validou todas as propostas, no entanto, 8 destas resultaram
-em um desacordo entre os autores.
+autor validou todas as propostas, e 8 *artifacts* geraram desacordo entre os autores. No total, 39 discussões de *code smells* foram encontrados dos artifacts
+38 *artifacts* selecionados, que expandiu o catálogo de *Elixir-specific smells*
 
 # Quais são os resultados?
 
@@ -147,7 +159,7 @@ uma abordagem baseada em métodos mistos para identificar e categorizar esses pr
 
 # Replicação
 
-* Onde estão os dados? Os repositórios do GitHub são públicos.
+* Onde estão os dados? [link](https://github.com/lucasvegi/Elixir-Code-Smells.git) 
 * Onde está o código? Não foi fornecido - o artigo é descritivo e os códigos utilizados são de repositórios públicos no GitHub
 * Conseguiu entender/rodar? Não — o artigo é apenas descritivo.
 * Dá para replicar o experimento/estudo? 
