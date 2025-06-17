@@ -10,20 +10,19 @@
 
 # Qual o problema?
 
-O problema que o artigo aborda é a falta de conhecimento/entendimento
+O problema que o artigo aborda é a falta de conhecimento e entendimento
 sobre os *code smells* nas linguagens funcionais, especificamente na
 linguagem funcional *Elixir*. Tipicamente, linguagens de programação dispõem de ferramentas para detecção de 
-*smells* baseadas em estudos que catalogam e validam esses padrões. No entanto, devido à escassez de material 
-bibliográfico sobre o tema, a detecção desses *smells* em *Elixir* e em linguagens 
+*code smells* baseadas em estudos que catalogam e validam esses padrões. No entanto, devido à escassez de material 
+bibliográfico sobre o tema, a detecção desses *code smells* em *Elixir* e em linguagens 
 funcionais — seja manualmente ou por meio de ferramentas automatizadas — torna-se inviável, 
 dificultando também a análise do impacto desses code smells na qualidade do código. 
 
 
 # Qual a solução?
 
-A solução proposta pelo estudo foi a criação de um catálogo de
-*bad smells* de *Elixir*, através de uma análise de repositórios públicos
-no GitHub de projetos na linguagem, feitos por profissionais que trabalham com a mesma. 
+A solução proposta por este estudo foi a criação de um catálogo de bad smells específicos da linguagem Elixir, 
+elaborado por meio da análise de repositórios públicos no GitHub, pertencentes a projetos desenvolvidos por profissionais que atuam com essa linguagem.
 Dessa forma, é possível analisar melhor o impacto dos *smells* na qualidade do código e amplia as possibilidades 
 de desenvolvimento de ferramentas relacionadas a evitar eles.
 
@@ -32,20 +31,20 @@ de desenvolvimento de ferramentas relacionadas a evitar eles.
 
 Os autores aprofundam a literatura sobre *bad smells* de Elixir,
 propondo a documentação e catalogação de *code smells* específicos, utilizando como base as 
-impressões/preferências e códigos da comunidade de desenvolvedores profissionais da
+impressões, preferências e códigos da comunidade de desenvolvedores profissionais da
 linguagem como meio de validação.
 
 ## Quais são os detalhes técnicos dessa solução? O que chama mais atenção? Qual a ideia geral e o que deve ser discutido em mais detalhes?
 
 Os autores utilizaram uma abordagem metodológica mista, para
-documentar, catalogar e validar *code smells* em Elixir. Para
+documentar, catalogar e validar *code smells* em Elixir. Com o objetivo de 
 capturar os diferentes problemas de qualidade de código, os
 autores utilizaram da mescla de três estratégias:
 
 * *Grey literature review* : consiste na busca manual no Google e
 em canais informais, seleção minuciosa dos documentos
-relevantes, levando em conta os critérios de *Garousi et al. (2019)* - determina 
-a necessidade de limitar o número de documentos analisados em buscas em *Grey literature* - e por fim, 
+relevantes, levando em conta os critérios de *Garousi et al. (2019)* - que recomendam, entre outros aspectos
+a limitação do número de documentos analisados em buscas em *Grey literature*. Por fim, foi realizada
 a extração manual das discussões sobre o tema.
 
 * Interação com a comunidade: criação de um repositório público
@@ -53,9 +52,11 @@ no GitHub onde o catálogo inicial é compartilhado e os
 desenvolvedores são estimulados a contribuir.
 
 * MSR(*Mining Software Repositories*): busca automatizada no
-GitHub, aplicação do critério de autoridade de *Garousi* para
-filrar *artifacts* confiáveis e a leitura e análise manual dos
-selecionados.
+GitHub, seguida da aplicação do critério de autoridade de *Garousi* - 
+que envolve a análise da reputação e da credibilidade tanto do 
+responsável pelo projeto quanto de seu contratante, quando aplicável. 
+Esse critério é utilizado para filtrar artifacts considerados confiáveis. 
+Após essa etapa, é realizada a leitura e análise manual dos repositórios selecionados.
 
 # Como foi avaliado?
 
