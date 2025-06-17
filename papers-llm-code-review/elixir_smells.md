@@ -10,20 +10,23 @@
 
 # Qual o problema?
 
-O problema que o artigo aborda é o pouco
-aprofundamento/entendimento sobre as melhores práticas de
-programação com a linguagem funcional Elixir, devido à escassa
-quantidade de estudos e trabalhos conduzidos acerca das melhores
-maneiras de se trabalhar com ela, bem como a identificação de
-seus *bad smells*. 
+O problema que o artigo aborda é a falta de conhecimento/entendimento
+sobre os *code smells* nas linguagens funcionais, especificamente na
+linguagem funcional *Elixir*. Tipicamente, linguagens de programação dispõem de ferramentas para detecção de 
+*smells* baseadas em estudos que catalogam e validam esses padrões. No entanto, devido à escassez de material 
+bibliográfico sobre o tema, a detecção desses *smells* em *Elixir* e em linguagens 
+funcionais — seja manualmente ou por meio de ferramentas automatizadas — torna-se inviável, 
+dificultando também a análise do impacto desses code smells na qualidade do código. 
+
 
 # Qual a solução?
 
 A solução proposta pelo estudo foi a criação de um catálogo de
-*bad smells* de Elixir, através
-de uma análise das práticas de programação de diversos profissionais
-que utilizam a linguagem, visando documentar e validar os mais importantes
-*smells* e boas práticas de código. 
+*bad smells* de *Elixir*, através de uma análise de repositórios públicos
+no GitHub de projetos na linguagem, feitos por profissionais que trabalham com a mesma. 
+Dessa forma, é possível analisar melhor o impacto dos *smells* na qualidade do código e amplia as possibilidades 
+de desenvolvimento de ferramentas relacionadas a evitar eles.
+
 
 ## Como os autores tentam resolver o problema? Criando um algoritmo novo? uma metodologia? uma ferramenta? 
 
@@ -41,7 +44,8 @@ autores utilizaram da mescla de três estratégias:
 
 * *Grey literature review* : consiste na busca manual no Google e
 em canais informais, seleção minuciosa dos documentos
-relevantes, utilizando os critérios *Garousi et al.* e por fim, 
+relevantes, levando em conta os critérios de *Garousi et al. (2019)* - determina 
+a necessidade de limitar o número de documentos analisados em buscas em *Grey literature* - e por fim, 
 a extração manual das discussões sobre o tema.
 
 * Interação com a comunidade: criação de um repositório público
