@@ -164,7 +164,7 @@ uma abordagem baseada em métodos mistos para identificar e categorizar esses pr
 
 # Replicação
 
-* Onde estão os dados? [link](https://github.com/lucasvegi/Elixir-Code-Smells.git) 
+* Onde estão os dados? [Link do Repositório](https://github.com/lucasvegi/Elixir-Code-Smells.git) 
 * Onde está o código? Não foi fornecido - o artigo é descritivo e os códigos utilizados são de repositórios públicos no GitHub
 * Conseguiu entender/rodar? Não — o artigo é apenas descritivo.
 * Dá para replicar o experimento/estudo? 
