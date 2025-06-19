@@ -55,3 +55,20 @@ O artigo mostra uma contribuição importante ao trazer uma visão mais ampla, b
 Uma limitação importante é a ausência de análise textual dos ADRs. Embora o artigo categorize a adoção, frenquência e estrutura dos registros, ele não investiga quais tipos de decisões são mais comuns, quais tecnologias aparecem com mais frenquência, ou como as justificativas são formuladas. Além disso, os autores não disponibilizam publicamente o código fonte de coleta e análise, o que dificulta dar continuidade ao estudo, mesmo que os repositórios estejam acessíveis.
 
 No contexto do meu trabalho, esse artigo é diretamente aplicável, tendo em vista que oferece um ponto de partida com dados concretos, e um conjunto inicial de repositórios na qual me fez ter uma compreensão da diversidade e informações da prática de ADRs. A leirura me mostrou uma direção que eu já vinha pesando para a minha pesquisa. A proposta de centralizar ADRs e torná-los acessíveis de forma organizada, mas agora exergo com mais clareza como posso ir além do que foi abordado no artigo. Enquanto os autores focaram na presença e estrutura de ADRs, percebi que tem um espaço para explorar o conteúdo dessas decisões mais detalhadamente.
+
+# Replicação
+
+- **Onde estão os dados?**  
+  Os dados coletados estão disponíveis no repositório público do GitHub mantido pelos autores:  
+   [https://github.com/software-competence-center-hagenberg/ADR-Study-Dataset](https://github.com/software-competence-center-hagenberg/ADR-Study-Dataset)
+
+  Nesse repositório, cada arquivo `.json` dentro do diretório `repositories/` representa os ADRs extraídos de um projeto open source. Cada JSON contém o conteúdo dos ADRs e metadados.
+
+- **Onde está o código?**  
+  O artigo **não disponibiliza** o código-fonte do _crawler_ nem do _analyzer_ usados para a coleta, extração e análise dos dados. Os autores apenas descrevem o funcionamento dessas ferramentas na seção de execução do estudo, mas os algoritmos utilizados não foram publicados.
+
+- **Conseguiu entender/rodar?**  
+  Como o código não está acessível, não é possível executar localmente o processo de extração. Porêm, os dados estruturados em JSON facilita o entendimento.
+
+- **Dá para replicar o experimento/estudo?**  
+  Parcialmente. Os dados extraídos estão disponíveis no repositório do dataset, o que permite reproduzir a parte de análise descritiva realizada no artigo. No entanto, a replicação completa do experimento, especialmente a parte da coleta automatizada, exige a **reimplementação da ferramenta desenvolvida pelos autores** (composta por um _crawler_ e um _analyzer_), pois o código não foi publicado. Essa ferramenta é responsável por clonar os repositórios, identificar os diretórios com ADRs, ler os arquivos Markdown com palavras chaves, extrair metadados dos commits e classificar os templates utilizados. Apesar de o funcionamento estar bem descrito, seria necessário reconstruí-lo com base no artigo para repetir a coleta desde o início.
